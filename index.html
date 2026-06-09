@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>창근 ❤️ 채민 - 우리들의 기적 같은 이야기</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for cute & warm typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Noto+Sans+KR:wght@300;400;700;900&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fffafb; /* Soft warm pink-white background */
+    }
+    .font-cute {
+      font-family: 'Gamja Flower', cursive;
+    }
+    .font-english {
+      font-family: 'Nunito', sans-serif;
+    }
+    /* Cute bounce animation for hearts */
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    .animate-heartbeat {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+    /* Floating background items animation */
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+    .animate-floaty {
+      animation: floaty 6s ease-in-out infinite;
+    }
+    /* Shimmering gradient for texts */
+    .text-love-gradient {
+      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Flip card effect for coupons */
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="text-slate-800 overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
+
+  <!-- Floating Background Elements (Hearts & Clouds) -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="absolute top-20 left-10 text-rose-300/30 text-4xl animate-floaty" style="animation-delay: 0s;">🌸</div>
+    <div class="absolute top-40 right-12 text-rose-300/25 text-5xl animate-floaty" style="animation-delay: 1.5s;">☁️</div>
+    <div class="absolute bottom-1/4 left-8 text-rose-300/30 text-4xl animate-floaty" style="animation-delay: 3s;">🎈</div>
+    <div class="absolute bottom-1/3 right-16 text-rose-300/20 text-6xl animate-floaty" style="animation-delay: 4.5s;">💖</div>
+    <div class="absolute top-2/3 left-1/4 text-rose-300/15 text-5xl animate-floaty" style="animation-delay: 2s;">✨</div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-rose-100 px-4 py-3">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <a href="#" class="font-cute text-2xl md:text-3xl font-bold text-rose-500 tracking-wide">창근 ❤️ 채민</a>
+      <nav class="flex space-x-4 md:space-x-6 text-xs md:text-sm font-bold text-slate-600">
+        <a href="#dday" class="hover:text-rose-500 transition-all">D-DAY</a>
+        <a href="#story" class="hover:text-rose-500 transition-all">STORY</a>
+        <a href="#profile" class="hover:text-rose-500 transition-all">PROFILE</a>
+        <a href="#distance" class="hover:text-rose-500 transition-all">MAP</a>
+        <a href="#coupons" class="hover:text-rose-500 transition-all">COUPON</a>
+        <a href="#diary" class="hover:text-rose-500 transition-all">DIARY</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / D-Day Section -->
+  <section id="dday" class="relative min-h-screen flex flex-col items-center justify-center pt-24 px-4 text-center z-10">
+    <div class="space-y-6 max-w-2xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-100 text-rose-500 text-xs md:text-sm font-bold">
+        <span>💘</span> 예쁘게 사랑하는 중
+      </div>
+
+      <h1 class="font-cute text-5xl md:text-7xl font-black text-slate-800 leading-tight">
+        기적처럼 만난 우리,<br>
+        <span class="text-love-gradient animate-heartbeat inline-block">창근이와 채민이</span>
+      </h1>
+
+      <p class="text-slate-500 text-sm md:text-base leading-relaxed font-medium">
+        2025년 12월 말 아웃백에서의 설레는 첫 만남부터,<br>
+        2026년 2월 13일 서로의 손을 맞잡고 예쁜 사랑을 시작한 기적 같은 순간들을 모았습니다.
+      </p>
+
+      <!-- Beautiful Styled D-Day Card -->
+      <div class="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl shadow-rose-100/50 border border-rose-100 max-w-md mx-auto relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-24 h-24 bg-rose-50 rounded-full -z-10"></div>
+        <div class="absolute -left-8 -bottom-8 w-24 h-24 bg-rose-50 rounded-full -z-10"></div>
+
+        <h3 class="font-cute text-xl md:text-2xl text-slate-500 font-bold mb-1">우리가 사랑을 시작한 지</h3>
+        
+        <div class="font-english text-4xl md:text-5xl font-black text-rose-500 tracking-wide py-3" id="live-dday">
+          D+000
+        </div>
+
+        <div class="text-xs text-slate-400 font-semibold space-y-1">
+          <div>시작일: 2026년 2월 13일</div>
+          <div class="text-rose-400 font-bold">🎉 2026년 5월 23일, 우리의 100일 🎉</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-rose-400 text-xs flex flex-col items-center gap-1 font-bold animate-bounce">
+      <span>우리의 특별한 이야기 보러가기</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </div>
+  </section>
+
+  <!-- Our Story Section (Outback AK Bundang) -->
+  <section id="story" class="py-24 px-4 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16 space-y-3">
+        <h2 class="font-cute text-4xl md:text-5xl font-bold text-rose-500">OUR MIRACLE AT OUTBACK</h2>
+        <p class="text-slate-400 text-sm md:text-base font-medium">아웃백 AK분당점, 찰나의 기적 같은 타이밍</p>
+      </div>
+
+      <!-- Story Timeline Container -->
+      <div class="relative border-l-2 border-rose-100 ml-4 md:ml-32 space-y-12">
+        
+        <!-- Step 1 -->
+        <div class="relative pl-8 md:pl-12">
+          <!-- Bullet Point -->
+          <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-rose-400 border-4 border-white shadow shadow-rose-200"></div>
+          
+          <div class="bg-rose-50/50 hover:bg-rose-50/80 p-6 rounded-2xl border border-rose-100/50 transition-all duration-300">
+            <span class="font-english font-black text-rose-400 text-xs tracking-wider block mb-1">THE BEGINNING</span>
+            <h3 class="font-cute text-xl md:text-2xl font-bold text-slate-800">이창근의 아웃백 근무</h3>
+            <p class="text-slate-500 text-sm mt-2 leading-relaxed">
+              분당의 중심, 아웃백 AK분당점에서 먼저 열심히 땀 흘려 일하고 있었던 나(창근). 매일 반복되는 평범한 일상이었습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-rose-400 border-4 border-white shadow shadow-rose-200"></div>
+          
+          <div class="bg-rose-50/50 hover:bg-rose-50/80 p-6 rounded-2xl border border-rose-100/50 transition-all duration-300">
+            <span class="font-english font-black text-rose-400 text-xs tracking-wider block mb-1">DESTINED ENCOUNTER</span>
+            <h3 class="font-cute text-xl md:text-2xl font-bold text-slate-800">2025년 12월 말, 채민이의 아웃백 입사</h3>
+            <p class="text-slate-500 text-sm mt-2 leading-relaxed">
+              추운 겨울날, 마치 크리스마스 선물처럼 아웃백의 새 식구로 문을 열고 들어온 채민이. 밝고 사랑스러운 채민이를 본 순간, 매장 전체가 따뜻해지는 기분이 들었습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-rose-400 border-4 border-white shadow shadow-rose-200"></div>
+          
+          <div class="bg-rose-50/50 hover:bg-rose-50/80 p-6 rounded-2xl border border-rose-100/50 transition-all duration-300">
+            <span class="font-english font-black text-rose-400 text-xs tracking-wider block mb-1">OUR START - FEB 13</span>
+            <h3 class="font-cute text-xl md:text-2xl font-bold text-slate-800">2026년 2월 13일, 운명 같은 연인의 탄생</h3>
+            <p class="text-slate-500 text-sm mt-2 leading-relaxed">
+              점점 서로에게 빠져들던 우리는 마침내 2월 13일 연인이 되었습니다! 창근이의 3월 퇴사를 바로 눈앞에 둔 시점, 그 찰나의 순간에 서로의 진심을 기적적으로 확인하고 아름다운 사랑을 약속하게 되었습니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Profiles Section -->
+  <section id="profile" class="py-24 px-4 bg-rose-50/30 border-t border-b border-rose-100 relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16 space-y-3">
+        <h2 class="font-cute text-4xl md:text-5xl font-bold text-rose-500">HIS & HER MINI CARDS</h2>
+        <p class="text-slate-400 text-sm md:text-base font-medium">대구와 경기, 각자의 빛나는 청춘 속의 두 사람</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Chang-geun's Card -->
+        <div class="bg-white p-8 rounded-3xl border border-rose-100 shadow-lg shadow-rose-500/5 relative overflow-hidden group">
+          <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-rose-50 rounded-full group-hover:scale-110 transition-all duration-500"></div>
+          
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="font-cute text-3xl font-bold text-slate-800">이창근 <span class="text-slate-400 text-lg">He</span></h3>
+            <span class="text-3xl">🧑‍💻</span>
+          </div>
+
+          <ul class="space-y-3.5 text-sm font-semibold text-slate-600">
+            <li class="flex items-center justify-between pb-2 border-b border-rose-50/50">
+              <span class="text-slate-400">생년월일</span>
+              <span>2002년 7월 17일</span>
+            </li>
+            <li class="flex items-center justify-between pb-2 border-b border-rose-50/50">
+              <span class="text-slate-400">출신 학교</span>
+              <span>장안중 ➡️ 수내고등학교</span>
+            </li>
+            <li class="flex items-center justify-between pb-2 border-b border-rose-50/50">
+              <span class="text-slate-400">현재 신분</span>
+              <span class="text-rose-500">경북대학교 재학 중</span>
+            </li>
+            <li class="flex items-center justify-between pb-2">
+              <span class="text-slate-400">사랑의 외침</span>
+              <span class="text-rose-400 italic">"채민이를 하늘만큼 땅만큼 사랑해!"</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Chae-min's Card -->
+        <div class="bg-white p-8 rounded-3xl border border-rose-100 shadow-lg shadow-rose-500/5 relative overflow-hidden group">
+          <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-rose-50 rounded-full group-hover:scale-110 transition-all duration-500"></div>
+          
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="font-cute text-3xl font-bold text-slate-800">임채민 <span class="text-slate-400 text-lg">She</span></h3>
+            <span class="text-3xl">👧👸</span>
+          </div>
+
+          <ul class="space-y-3.5 text-sm font-semibold text-slate-600">
+            <li class="flex items-center justify-between pb-2 border-b border-rose-50/50">
+              <span class="text-slate-400">생년월일</span>
+              <span>2006년 1월 27일</span>
+            </li>
+            <li class="flex items-center justify-between pb-2 border-b border-rose-50/50">
+              <span class="text-slate-400">출신 학교</span>
+              <span>서현중 ➡️ 야탑고등학교</span>
+            </li>
+            <li class="flex items-center justify-between pb-2 border-b border-rose-50/50">
+              <span class="text-slate-400">현재 신분</span>
+              <span class="text-rose-500">경기대학교 재학 중</span>
+            </li>
+            <li class="flex items-center justify-between pb-2">
+              <span class="text-slate-400">사랑스러운 매력</span>
+              <span class="text-rose-400 italic">"창근이가 매일매일 보고 싶은 예쁜이"</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Distance Map Simulation Section (Daegu - Gyeonggi) -->
+  <section id="distance" class="py-24 px-4 bg-white relative z-10">
+    <div class="max-w-3xl mx-auto text-center space-y-8">
+      <div class="space-y-3">
+        <h2 class="font-cute text-4xl md:text-5xl font-bold text-rose-500">OUR LONG-DISTANCE LOVE MAP</h2>
+        <p class="text-slate-500 text-sm md:text-base font-medium">
+          대구(경북대)와 경기(경기대)의 거리, 장거리 연애지만 물리적 한계를 훌쩍 뛰어넘는 마음의 크기
+        </p>
+      </div>
+
+      <!-- Distance interactive display -->
+      <div class="bg-rose-50/40 p-8 rounded-3xl border border-rose-100 max-w-2xl mx-auto relative overflow-hidden">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 relative py-8">
+          
+          <!-- Suwon / Kyonggi Univ -->
+          <div class="text-center z-10">
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl mx-auto shadow-md border border-amber-200">
+              🏫
+            </div>
+            <h4 class="font-cute text-lg font-bold text-slate-800 mt-2">임채민 (경기대)</h4>
+            <span class="text-xs bg-amber-200/50 text-amber-800 px-2 py-0.5 rounded-full font-bold">경기 / 분당</span>
+          </div>
+
+          <!-- Connecting line and flying heart -->
+          <div class="flex-1 w-full sm:w-auto flex flex-col items-center justify-center relative min-h-[60px]">
+            <div class="w-full h-1 bg-dashed bg-gradient-to-r from-amber-400 via-rose-400 to-rose-500 rounded relative">
+              <!-- Animated Heart running between locations -->
+              <div class="absolute -top-3.5 left-0 w-8 h-8 rounded-full bg-rose-500 shadow-md text-white flex items-center justify-center text-xs animate-heartbeat" id="traveling-heart" style="transition: left 4s ease-in-out;">
+                ❤️
+              </div>
+            </div>
+            <span class="text-xs font-bold text-rose-500 mt-4 bg-white px-3 py-1 rounded-full border border-rose-100">우리의 마음거리: 0m</span>
+          </div>
+
+          <!-- Daegu / Kyungpook Univ -->
+          <div class="text-center z-10">
+            <div class="w-16 h-16 rounded-2xl bg-rose-100 flex items-center justify-center text-3xl mx-auto shadow-md border border-rose-200">
+              🎓
+            </div>
+            <h4 class="font-cute text-lg font-bold text-slate-800 mt-2">이창근 (경북대)</h4>
+            <span class="text-xs bg-rose-200/50 text-rose-800 px-2 py-0.5 rounded-full font-bold">대구</span>
+          </div>
+
+        </div>
+
+        <p class="text-slate-500 text-xs md:text-sm leading-relaxed mt-4 bg-white/70 p-4 rounded-xl border border-rose-50">
+          "몸은 비록 멀리 떨어져 있고 각자의 대학 생활로 바쁜 장거리 연애 중이지만,<br>
+          우리 두 사람은 아주 오랫동안 끈끈하게 함께 갈 것을 확신하고 있으며 매일매일이 행복으로 가득 차 있습니다."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coupon Flip Section (Interactive letters) -->
+  <section id="coupons" class="py-24 px-4 bg-rose-50/20 border-t border-b border-rose-100 relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16 space-y-3">
+        <h2 class="font-cute text-4xl md:text-5xl font-bold text-rose-500">VALUABLE LOVE COUPONS</h2>
+        <p class="text-slate-400 text-sm md:text-base font-medium">채민이만을 위한 창근이의 평생 보장 사랑의 쿠폰 (클릭해서 열어보세요!)</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Coupon 1 -->
+        <div class="flip-card w-full h-44 cursor-pointer" onclick="toggleFlip(this)">
+          <div class="flip-card-inner relative w-full h-full text-center">
+            
+            <!-- Front -->
+            <div class="flip-card-front absolute inset-0 bg-white border border-rose-100 rounded-2xl shadow p-6 flex flex-col justify-between">
+              <span class="text-3xl text-rose-400">🎫</span>
+              <h4 class="font-cute text-xl font-bold text-slate-800">대구행 기차 프리패스</h4>
+              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">클릭해서 뒤집기</span>
+            </div>
+
+            <!-- Back -->
+            <div class="flip-card-back absolute inset-0 bg-rose-500 text-white rounded-2xl p-4 flex flex-col justify-center items-center">
+              <p class="text-xs font-semibold leading-relaxed">
+                채민이가 대구로 내려오는 날,<br>창근이가 기차역에서 세상에서 제일 큰 품으로 안아주고 모든 데이트 프리패스!
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Coupon 2 -->
+        <div class="flip-card w-full h-44 cursor-pointer" onclick="toggleFlip(this)">
+          <div class="flip-card-inner relative w-full h-full text-center">
+            
+            <!-- Front -->
+            <div class="flip-card-front absolute inset-0 bg-white border border-rose-100 rounded-2xl shadow p-6 flex flex-col justify-between">
+              <span class="text-3xl text-amber-400">🍽️</span>
+              <h4 class="font-cute text-xl font-bold text-slate-800">아웃백 추억 소환권</h4>
+              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">클릭해서 뒤집기</span>
+            </div>
+
+            <!-- Back -->
+            <div class="flip-card-back absolute inset-0 bg-amber-500 text-white rounded-2xl p-4 flex flex-col justify-center items-center">
+              <p class="text-xs font-semibold leading-relaxed">
+                우리가 처음 만나 함께 일했던 아웃백 AK분당점에 다시 같이 가서, 투움바 파스타와 스테이크를 먹으며 25년 12월의 첫 설렘을 회상하는 날!
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Coupon 3 -->
+        <div class="flip-card w-full h-44 cursor-pointer" onclick="toggleFlip(this)">
+          <div class="flip-card-inner relative w-full h-full text-center">
+            
+            <!-- Front -->
+            <div class="flip-card-front absolute inset-0 bg-white border border-rose-100 rounded-2xl shadow p-6 flex flex-col justify-between">
+              <span class="text-3xl text-sky-400">🧸</span>
+              <h4 class="font-cute text-xl font-bold text-slate-800">하루 종일 껌딱지 이용권</h4>
+              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">클릭해서 뒤집기</span>
+            </div>
+
+            <!-- Back -->
+            <div class="flip-card-back absolute inset-0 bg-sky-500 text-white rounded-2xl p-4 flex flex-col justify-center items-center">
+              <p class="text-xs font-semibold leading-relaxed">
+                장거리의 서러움을 한 방에 날리는 하루! 손 꼭 잡고 단 1초도 안 떨어지고 껌딱지처럼 하루 종일 붙어 있어 주기 보장!
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Coupon 4 -->
+        <div class="flip-card w-full h-44 cursor-pointer" onclick="toggleFlip(this)">
+          <div class="flip-card-inner relative w-full h-full text-center">
+            
+            <!-- Front -->
+            <div class="flip-card-front absolute inset-0 bg-white border border-rose-100 rounded-2xl shadow p-6 flex flex-col justify-between">
+              <span class="text-3xl text-emerald-400">💌</span>
+              <h4 class="font-cute text-xl font-bold text-slate-800">창근이 손편지 신청서</h4>
+              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">클릭해서 뒤집기</span>
+            </div>
+
+            <!-- Back -->
+            <div class="flip-card-back absolute inset-0 bg-emerald-500 text-white rounded-2xl p-4 flex flex-col justify-center items-center">
+              <p class="text-xs font-semibold leading-relaxed">
+                이걸 사용하면 창근이가 채민이에 대한 끝없는 고마움과 절절한 사랑을 정성 가득 자필 편지로 꽉 채워 우편으로 보내드립니다!
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Love Diary (Interative Note Pad) -->
+  <section id="diary" class="py-24 px-4 bg-white relative z-10">
+    <div class="max-w-xl mx-auto text-center space-y-6">
+      <div class="space-y-3">
+        <h2 class="font-cute text-4xl md:text-5xl font-bold text-rose-500">OUR SECRET DIARY</h2>
+        <p class="text-slate-500 text-sm font-medium">우리들의 달콤한 기록과 작은 약속들을 적어두는 공간</p>
+      </div>
+
+      <!-- Diary Interactive Box -->
+      <div class="bg-rose-50/30 p-6 md:p-8 rounded-3xl border border-rose-100 shadow-inner">
+        <div class="space-y-4">
+          <textarea id="diary-text" rows="3" placeholder="예) 채민아 경기대 잘 갔다 왔어? 사랑해! / 창근아 경북대 축제 재밌었어?" class="w-full bg-white border border-rose-100 rounded-2xl px-4 py-3 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-rose-400 transition-all duration-300 text-sm font-semibold"></textarea>
+          
+          <div class="flex justify-between items-center">
+            <input type="text" id="diary-author" placeholder="작성자 이름" class="bg-white border border-rose-100 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:border-rose-400 w-32">
+            <button onclick="saveDiaryEntry()" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs shadow-md active:scale-95 transition-all">
+              ✍️ 다이어리 적기
+            </button>
+          </div>
+        </div>
+
+        <!-- Rendered lists -->
+        <div class="mt-8 border-t border-rose-100 pt-6">
+          <h4 class="font-cute text-lg text-slate-700 font-bold mb-4 text-left">📖 우리들의 소소한 흔적들</h4>
+          <div id="diary-entries" class="space-y-3 max-h-60 overflow-y-auto pr-2 text-left">
+            <!-- Saved posts go here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sweet Epilogue Letter -->
+  <section class="py-24 px-4 bg-rose-50/10 border-t border-rose-100 relative z-10 text-center">
+    <div class="max-w-2xl mx-auto space-y-8">
+      <div class="w-16 h-16 rounded-full bg-rose-100 border border-rose-200 mx-auto flex items-center justify-center text-3xl animate-heartbeat">
+        💝
+      </div>
+      <h3 class="font-cute text-2xl md:text-3xl text-rose-500 font-bold">창근이가 채민이에게 보내는 메시지</h3>
+      
+      <p class="text-slate-600 text-sm md:text-base leading-relaxed font-semibold italic">
+        "서현중, 야탑고를 나와 지금은 경기대생인 아름답고 자랑스러운 나의 여자친구 임채민.<br>
+        비록 대구와 경기도를 가로지르는 장거리 연애이지만, 서로에 대한 믿음이 워낙 깊어서 우리는 아주 오래오래 기적처럼 예쁜 사랑을 이어갈 거라고 굳게 믿고 있어.<br>
+        2025년 12월 아웃백에서 너를 처음 마주하고, 2026년 2월 13일 내 인생 최고의 날에 사귀기 시작해 5월 23일 100일을 지나오기까지 매 순간 고마웠어. 평생 채민이 곁을 든든하게 지켜줄게. 창근이가 온 진심을 다해 아주 많이 사랑해!"
+      </p>
+    </div>
+  </section>
+
+  <!-- Epic Cute Footer -->
+  <footer class="bg-rose-950 text-rose-100/60 text-xs py-12 px-4 text-center border-t border-rose-900">
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div class="font-cute text-lg font-bold text-rose-300">LEE CHANG GEUN ❤️ LIM CHAE MIN</div>
+      <p class="max-w-md mx-auto text-[11px] leading-relaxed">
+        본 사이트는 2025년 12월 말 아웃백 분당AK점에서 만나 2026년 2월 13일 연애를 시작한 이후, 장거리를 이겨내며 세상에서 가장 예쁜 연애를 이어가고 있는 이창근과 임채민 두 분의 헌정 사랑 페이지입니다.
+      </p>
+      <div class="text-rose-400 font-bold mt-4">
+        © 2026 CHANG-GEUN & CHAE-MIN FOREVER. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast/Pop-up notification layer -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-rose-900 text-white border border-rose-700 py-3 px-5 rounded-2xl shadow-2xl opacity-0 transform translate-y-10 pointer-events-none transition-all duration-300 text-xs font-semibold">
+    <span id="toast-text">메모가 예쁘게 등록되었습니다!</span>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // Live D-Day and Time calculation (Since 2026-02-13)
+    const startDate = new Date('2026-02-13T00:00:00');
+    
+    function updateLiveDDay() {
+      const now = new Date();
+      const diffTime = now - startDate;
+      
+      // Calculate total days
+      const days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1; // Count day 1 as start
+      
+      // Calculate remaining hours, minutes, seconds for detailed live rendering
+      const hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diffTime / (1000 * 60)) % 60);
+      const seconds = Math.floor((diffTime / 1000) % 60);
+
+      const formatHours = String(hours).padStart(2, '0');
+      const formatMinutes = String(minutes).padStart(2, '0');
+      const formatSeconds = String(seconds).padStart(2, '0');
+
+      document.getElementById('live-dday').innerHTML = `
+        D+${days} 
+        <span class="text-sm block md:inline font-semibold text-rose-300 font-mono mt-2 md:mt-0">
+          (${formatHours}시간 ${formatMinutes}분 ${formatSeconds}초째 연애중)
+        </span>
+      `;
+    }
+
+    // Map Animation - Traveling Heart
+    function animateHeart() {
+      const heart = document.getElementById('traveling-heart');
+      let direction = 1; // 1: to right (Changgeun), 0: to left (Chaemin)
+      
+      setInterval(() => {
+        if (direction === 1) {
+          heart.style.left = "calc(100% - 2rem)";
+          direction = 0;
+        } else {
+          heart.style.left = "0px";
+          direction = 1;
+        }
+      }, 5000);
+    }
+
+    // Interactive Coupon Flipping
+    function toggleFlip(card) {
+      card.classList.toggle('flipped');
+    }
+
+    // Shared Love Diary Board (with LocalStorage)
+    const mockInitialDiary = [
+      { author: "창근", text: "채민이 얼굴만 봐도 기운이 펄펄 나는 2026년의 봄날들! 항상 고마워." },
+      { author: "채민", text: "아웃백에서 오빠 만나서 일 그만둔 뒤에도 매일이 꿈같아 💕 오래 보아!" }
+    ];
+
+    function loadDiaryEntries() {
+      const container = document.getElementById('diary-entries');
+      container.innerHTML = "";
+      
+      let entries = JSON.parse(localStorage.getItem('cc_love_diary'));
+      if (!entries) {
+        entries = mockInitialDiary;
+        localStorage.setItem('cc_love_diary', JSON.stringify(entries));
+      }
+
+      entries.forEach(entry => {
+        const item = document.createElement('div');
+        item.className = "bg-white p-3.5 rounded-2xl border border-rose-100 shadow-sm flex flex-col justify-between";
+        item.innerHTML = `
+          <p class="text-xs font-semibold text-slate-700 leading-relaxed">${escapeHTML(entry.text)}</p>
+          <div class="flex justify-between items-center mt-2 border-t border-rose-50/50 pt-2">
+            <span class="text-[10px] font-bold text-rose-400 bg-rose-50 px-2.5 py-0.5 rounded-full">Writer: ${escapeHTML(entry.author)}</span>
+            <span class="text-[10px] text-slate-400">행복 기록 완료</span>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function saveDiaryEntry() {
+      const text = document.getElementById('diary-text').value.trim();
+      const author = document.getElementById('diary-author').value.trim();
+
+      if (!text || !author) {
+        showToast("❌ 작성자와 소소한 기록을 모두 채워주세요!");
+        return;
+      }
+
+      let entries = JSON.parse(localStorage.getItem('cc_love_diary')) || [];
+      entries.unshift({ author, text });
+      localStorage.setItem('cc_love_diary', JSON.stringify(entries));
+
+      // Reset
+      document.getElementById('diary-text').value = '';
+      document.getElementById('diary-author').value = '';
+
+      loadDiaryEntries();
+      showToast("🌸 사랑의 추억 기록이 다이어리에 추가되었습니다!");
+    }
+
+    // Utils
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+      );
+    }
+
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.textContent = message;
+      
+      toast.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3000);
+    }
+
+    // Run Engine
+    window.onload = function() {
+      updateLiveDDay();
+      setInterval(updateLiveDDay, 1000);
+      animateHeart();
+      loadDiaryEntries();
+    }
+  </script>
+</body>
+</html>
